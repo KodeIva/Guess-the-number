@@ -16,7 +16,9 @@ function playGame() {
 
  if (userGuess < 1 || userGuess > 100) {
   alert('Please enter a number between 1 and 100')
- } else if (userGuess < compGuess) {
+ } else if(userGuess=== '' || isNaN(userGuess)) {
+  alert('Enter only NUMBERS!!!')
+ }else if (userGuess < compGuess) {
   numberOfGuesses += 1
   guessedNumbers.push(userGuess)
   msg1.textContent = 'Your guess is too LOW'
