@@ -18,6 +18,8 @@ function playGame() {
   alert('Please enter a number between 1 and 100')
  } else if(userGuess=== '' || isNaN(userGuess)) {
   alert('Enter only NUMBERS!!!')
+  input.value = ''
+  input.focus()
  }else if (userGuess < compGuess) {
   numberOfGuesses += 1
   guessedNumbers.push(userGuess)
