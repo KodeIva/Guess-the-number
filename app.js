@@ -3,8 +3,7 @@ let msg1 = document.querySelector('#message1')
 let msg2 = document.querySelector('#message2') 
 let msg3 = document.querySelector('#message3')
 
-//let compGuess = Math.floor(Math.random() * 100) + 1
-let compGuess = 5
+let compGuess = Math.floor(Math.random() * 100) + 1
 let guessedNumbers = []
 let numberOfGuesses = 0
 let input = document.querySelector('#guess')
@@ -87,9 +86,9 @@ function reset() {
   input.value = ''
   input.focus()
   msg1.textContent = ''
-  msg2.textContent = 'You guessed: 0 times'
-  msg3.textContent = 'Guessed numbers: None ' 
+  msg2.textContent = 'Number of Guesses: 0 times'
+  msg3.textContent = 'Your numbers: ' 
   btn.disabled = false
   btn.style.opacity = '1'
-  compGuess = Math.floor(Math.random() * 10) + 1
+  compGuess = Math.floor(Math.random() * 100) + 1
 }
