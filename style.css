@@ -23,7 +23,7 @@ section {
 .container {
  position: absolute;
  width: 50%;
- min-width: 580px;
+ width: 580px;
  transform: translate(-50%,-50%);
  top: 50%;
  left: 50%;
@@ -78,6 +78,24 @@ transform: scale(1.2);
 
 @media (max-width: 750px) {
   .container {
-    min-width: 480px;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+  h3 {
+   font-size: 25px;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  button {
+    font-size: 20px; 
+  }
+  p {
+    font-size: 18px;
   }
 }
