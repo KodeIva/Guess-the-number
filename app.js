@@ -3,7 +3,8 @@ let msg1 = document.querySelector('#message1')
 let msg2 = document.querySelector('#message2') 
 let msg3 = document.querySelector('#message3')
 
-let compGuess = Math.floor(Math.random() * 100) + 1
+//let compGuess = Math.floor(Math.random() * 100) + 1
+let compGuess = 5
 let guessedNumbers = []
 let numberOfGuesses = 0
 let input = document.querySelector('#guess')
@@ -25,7 +26,13 @@ function playGame() {
   guessedNumbers.push(userGuess)
   msg1.textContent = 'Your guess is too LOW'
   msg1.style.color = 'red'
-  msg2.textContent = 'You guessed: ' + numberOfGuesses + 'times'
+
+    if(numberOfGuesses === 1) {
+     msg2.textContent = 'You guessed: ' + numberOfGuesses + ' time'
+    }else {
+     msg2.textContent = 'You guessed: ' + numberOfGuesses + ' times'
+    }
+
   msg3.textContent = 'Your numbers are: ' + guessedNumbers
    input.value = ''
    input.focus()
@@ -34,14 +41,27 @@ function playGame() {
   guessedNumbers.push(userGuess)
   msg1.textContent = 'Your guess is too HIGH'
   msg1.style.color = 'red'
-  msg2.textContent = 'You guessed: ' + numberOfGuesses + 'times'
+
+    if(numberOfGuesses === 1) {
+     msg2.textContent = 'You guessed: ' + numberOfGuesses + ' time'
+    }else {
+     msg2.textContent = 'You guessed: ' + numberOfGuesses + ' times'
+    }
+
   msg3.textContent = 'Your numbers are: ' + guessedNumbers
   input.value = ''
   input.focus()
  } else if (userGuess == compGuess) {
   msg1.textContent = 'You WON!!!'
   msg1.style.color = 'green'
-  msg2.textContent = 'You guessed: ' + numberOfGuesses + 'times'
+  numberOfGuesses += 1
+
+   if(numberOfGuesses === 1) {
+     msg2.textContent = 'You guessed: ' + numberOfGuesses + ' time'
+   }else {
+    msg2.textContent = 'You guessed: ' + numberOfGuesses + ' times'
+   }
+ 
   msg3.textContent = 'The winning number is: ' + userGuess
   btn.disabled = true
   btn.style.opacity = '0.5'
