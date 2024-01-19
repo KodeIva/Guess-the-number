@@ -86,7 +86,7 @@ function reset() {
   input.value = ''
   input.focus()
   msg1.textContent = ''
-  msg2.textContent = 'Number of Guesses: 0 times'
+  msg2.textContent = 'Number of Guesses: 0'
   msg3.textContent = 'Your numbers: ' 
   btn.disabled = false
   btn.style.opacity = '1'
