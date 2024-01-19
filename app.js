@@ -87,7 +87,7 @@ function reset() {
   input.focus()
   msg1.textContent = ''
   msg2.textContent = 'Number of Guesses: 0'
-  msg3.textContent = 'Your numbers: ' 
+  msg3.textContent = 'Your Numbers: ' 
   btn.disabled = false
   btn.style.opacity = '1'
   compGuess = Math.floor(Math.random() * 100) + 1
