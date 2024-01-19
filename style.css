@@ -67,7 +67,7 @@ button {
  outline: none;
  cursor: pointer;
  transition: .5s ;
- box-shadow: 2px 2px 8px rgb(178, 232, 245);
+ box-shadow: 2px 2px 8px rgb(61, 181, 185);
 }
 
 button:hover {
@@ -78,6 +78,7 @@ transform: scale(1.1);
 
 button:last-child {
  color: rgb(238, 90, 31);
+ box-shadow: 2px 2px 8px rgb(238, 90, 31);
 }
 
 button:last-child:hover {
