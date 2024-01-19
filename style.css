@@ -54,25 +54,37 @@ input[type="text"] {
 }
 
 button { 
- height: 50px;
- width: 160px;
- padding: 15px 2x;
- margin: 10px 10px;
+ padding: 10px 10px;
+ margin: 5px;
  border-radius: 5px;
  background-color: rgba(255, 255, 255, 1);
  border: 8px solid #ececec;
  color: rgb(61, 181, 185);
  border: none;
  font-size: 25px;
- font-weight: 600;
+ font-weight: 500;
  margin-bottom: 30px;
  outline: none;
  cursor: pointer;
+ transition: .5s ;
+ box-shadow: 2px 2px 8px rgb(178, 232, 245);
 }
 
 button:hover {
-box-shadow: -2px -2px 8px rgb(178, 232, 245);
-transform: scale(1.2);
+color: white;
+background-color: rgb(61, 181, 185);;
+transform: scale(1.1);
+}
+
+button:last-child {
+ color: rgb(238, 90, 31);
+}
+
+button:last-child:hover {
+ color: white;
+ background-color: rgb(238, 90, 31);
+ box-shadow: 2px 2px 8px rgb(238, 90, 31);
+ transform: scale(1.1);
 }
 
 
